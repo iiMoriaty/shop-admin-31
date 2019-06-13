@@ -13,6 +13,7 @@ import Login from "./pages/Login.vue";
 import Admin from "./pages/Admin.vue";
 import GoodsList from "./pages/GoodsList.vue";
 import CategoryList from "./pages/CategoryList.vue";
+import GoodsAdd from "./pages/GoodsAdd.vue";
 
 // element: 2.注册element插件
 Vue.use(ElementUI);
@@ -26,6 +27,7 @@ const routes = [
   {path: "/login", component: Login, meta:"登录"},
   {path:"/admin", component:Admin, meta:"后台管理", children:[
     {path:"goods-list",component:GoodsList, meta:"商品列表"},
+    {path:"goods-add",component:GoodsAdd, meta:"添加商品"},
     {path:"category-list",component:CategoryList, meta:"栏目列表"}
   ]}
 ];

@@ -3,7 +3,7 @@
         <el-row type="flex" justify="space-between">
             <!-- 按钮列表 -->
            <div>
-                <el-button>新增</el-button>
+                <el-button @click="handleToGoodsAdd">新增</el-button>
                 <el-button type="danger" @click="handleDeleteMore">删除</el-button>
            </div>
 
@@ -132,7 +132,7 @@ export default {
 
         //编辑商品
         handleEdit(goods){
-            console.log(goods);
+            this.$router.push("/admin/goods-edit/" + goods.id)
         },
         //删除商品
         handleDeleteMore(){
@@ -189,6 +189,9 @@ export default {
             this.pageIndex = val;
             this.getList();
         },
+        handleToGoodsAdd(){
+            this.$router.push("/admin/goods-add");
+        }
     },
 
      mounted(){
